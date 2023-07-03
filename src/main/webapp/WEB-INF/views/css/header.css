@@ -1,0 +1,21 @@
+.header {
+    width: 100%;
+    font-family: "sans-serif";
+    color: #b7b7b7;
+    font-size: x-large;
+    background-color: #000000;
+    border-bottom: 20px solid aliceblue;
+}
+
+.header th {
+    margin-top: auto;
+    width: auto;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:link {
+    color: inherit;
+}
