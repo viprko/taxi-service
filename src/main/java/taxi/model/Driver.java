@@ -22,12 +22,11 @@ public class Driver {
         this.name = name;
         this.licenseNumber = licenseNumber;
     }
-
+  
     public Driver(String name, String licenseNumber, String login, String password) {
         this(name, licenseNumber);
         this.login = login;
         this.password = password;
-    }
 
     public Driver(Long id, String name, String licenseNumber, String login, String password) {
         this.id = id;
