@@ -212,11 +212,7 @@ public class CarDaoImpl implements CarDao {
         Long driverId = resultSet.getObject("id", Long.class);
         String name = resultSet.getString("name");
         String licenseNumber = resultSet.getString("license_number");
-        Driver driver = new Driver();
-        driver.setId(driverId);
-        driver.setName(name);
-        driver.setLicenseNumber(licenseNumber);
-        return driver;
+        return new Driver(driverId, name, licenseNumber);
     }
 
     private Car parseCarFromResultSet(ResultSet resultSet) throws SQLException {
@@ -229,10 +225,6 @@ public class CarDaoImpl implements CarDao {
         manufacturer.setCountry(manufacturerCountry);
         Long carId = resultSet.getObject("id", Long.class);
         String model = resultSet.getString("model");
-        Car car = new Car();
-        car.setId(carId);
-        car.setModel(model);
-        car.setManufacturer(manufacturer);
-        return car;
+        return new Car(carId, model, manufacturer);
     }
 }
